@@ -1,5 +1,5 @@
-import { StyledTitle } from "./Title.styles";
+import { StyledHeader } from "./Header.styles";
 
-export const Title = () => {
-  return <StyledTitle>TodoList</StyledTitle>;
+export const Header = () => {
+  return <StyledHeader>TodoList</StyledHeader>;
 };
