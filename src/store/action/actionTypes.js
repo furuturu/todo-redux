@@ -1,0 +1,6 @@
+export const actionTypes = {
+  COMPLETE_TASK: "COMPLETE_TASK",
+  ADD_TASK: "ADD_TASK",
+  DELETE_TASK: "DELETE_TASK",
+  SET_FILTER: "SET_FILTER",
+};
