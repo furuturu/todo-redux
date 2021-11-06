@@ -1,10 +1,14 @@
+import { actionTypes } from "../action/actionTypes";
+
+const { ADD_TASK, DELETE_TASK, COMPLETE_TASK, SAVE_EDITED } = actionTypes;
+
 const initialState = {
   todo: [],
 };
 
 export const taskReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "ADD_TASK":
+    case ADD_TASK:
       const newTask = {
         id: action.payload.id,
         isActive: true,
@@ -15,12 +19,12 @@ export const taskReducer = (state = initialState, action) => {
         ...state,
         todo: [...state.todo, newTask],
       };
-    case "DELETE_TASK":
+    case DELETE_TASK:
       return {
         ...state,
         todo: [...state.todo.filter((task) => task.id !== action.payload)],
       };
-    case "COMPLETE_TASK":
+    case COMPLETE_TASK:
       return {
         ...state,
         todo: [
@@ -34,7 +38,7 @@ export const taskReducer = (state = initialState, action) => {
           ),
         ],
       };
-    case "SAVE_EDITED":
+    case SAVE_EDITED:
       return {
         ...state,
         todo: [
